@@ -21,6 +21,7 @@ require 'faker'
 require 'sinatra'
 require "sinatra/reloader" if development?
 
+require 'materialize-sass'
 require 'erb'
 require 'pry'
 require 'byebug'

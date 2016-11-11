@@ -24,6 +24,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'materialize-sass'
   gem 'factory_girl'
   gem 'faker'
   gem 'pry'

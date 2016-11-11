@@ -1,36 +1,43 @@
 <div class="container">
+<div class="row">
   <h2>New User Registration</h2>
-
-<hr><br>
-<div class="errors">
-  <%= erb :'_errors' %>
-</div>
-  <form class="form-horizontal" action='/users' method ='post'>
-     <div class="form-group form-group-lg">
-      <label for=username class="col-sm-2 col-form-label">Username: </label>
-      <div class="col-sm-5">
-      <input type="text" class="form-control" name="user[username]" placeholder="username"></div>
-    </div>
-     <div class="form-group form-group-lg">
-      <label for=email class="col-sm-2 col-form-label">Email: </label>
-      <div class="col-sm-5">
-      <input type="text" class="form-control" name="user[email]" placeholder="email"></div>
-    </div>
-     <div class="form-group form-group-lg">
-      <label for=password class="col-sm-2 col-form-label">Password: </label>
-      <div class="col-sm-5">
-      <input type="password" class="form-control" name="user[password]" placeholder="password"></div>
-    </div>
-   <div class="form-group form-group-lg">
-      <label for=password class="col-sm-2 col-form-label">Password confirmation: </label>
-      <div class="col-sm-5">
-      <input type="password" class="form-control" name="user[password_confirmation]" placeholder="confirm password"></div>
-    </div>
-     <div class="form-group form-group-lg">
-      <div class="col-sm-2 col-form-label">
-      </div>
-    <div class="col-sm-5">
-    <input type="submit" class="form-control" name="login" class="btn btn-info" value="register new user"></div>
+  <div class="errors">
+    <%= erb :'_errors' %>
   </div>
+  <form class="col s12" action='/users' method ='post'>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="username" name="user[username]" placeholder="username"type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" name="user[email]" placeholder="email">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" name="user[password]" placeholder="password">
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <input id="password" type="password" class="validate" name="user[password_confirmation]" placeholder="confirm password">
+      <label for="password">Password</label>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col s12">
+        This is an inline input field:
+        <div class="input-field inline">
+        <input type="submit" class="form-control" name="login" class="btn btn-info" value="register new user">
+        </div>
+      </div>
+    </div>
   </form>
+</div>
 </div>

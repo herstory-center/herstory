@@ -1,6 +1,6 @@
 users = []
 
-10.times {
+14.times {
   users << User.create!(
     username: Faker::Internet.user_name,
     email: Faker::Internet.email,

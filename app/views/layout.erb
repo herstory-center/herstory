@@ -3,51 +3,58 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
 
-  <title></title>
+  <title>Herstory.center</title>
 </head>
 <body>
-  <nav class="light-blue cyan lighten-2" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Herstory</a>
+  <header>
+  <nav class="light-blue cyan lighten-2">
+      <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">HerStory.center</a>
         <ul class="right hide-on-med-and-down">
           <% if logged_in? %>
-
+            <li>
             <a href="/users/<%= current_user.id %>"><h3>Hello <%= current_user.username %></h3></a>
-            <a href="/logout" class="btn btn-default btn-md">log out</a>
+          </li>
+          <li>
+            <a href="/logout" >log out</a>
+            </li>
           <% else %>
-
-            <a href="/users/new" class="btn btn-default btn-md">sign up</a>
-
-            <a href="/sessions/new" class="btn btn-default btn-md">log in</a>
-
+           <li>
+            <a href="/users/new">sign up</a>
+          </li>
+          <li>
+            <a href="/sessions/new">log in</a>
+          </li>
           <% end %>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
           <% if logged_in? %>
-
+          <li>
             <a href="/users/<%= current_user.id %>"><h3>Hello <%= current_user.username %></h3></a>
             <a href="/logout" class="btn btn-default btn-md">log out</a>
+          </li>
           <% else %>
-
-            <a href="/users/new" class="btn btn-default btn-md">sign up</a>
-
-            <a href="/sessions/new" class="btn btn-default btn-md">log in</a>
-
+          <li>
+            <a href="/users/new">sign up</a>
+            <a href="/sessions/new">log in</a>
+          </li>
           <% end %>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
+  </header>
 
-
+  <main>
   <%= yield %>
-
+  </main>
 
   <footer class="page-footer cyan lighten-2">
     <div class="container">
@@ -55,53 +62,38 @@
         <div class="col l6 s12">
           <h5 class="white-text">HerStory.center</h5>
           <p class="grey-text text-lighten-4"></p>
-
-
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
-            <!-- <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li> -->
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
-            <!-- <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li> -->
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
 
-      </div>
+
       <div class="footer-copyright">
         <div class="container">
-        © 2016 Herstory.center  -   All rights reserved.
+        © 2016 HerStory.center  -   All rights reserved.
         <em>Made by <a class="orange-text text-lighten-2" href="#">Nanutza</a></em>
         <a class="grey-text text-lighten-4 right" href="#">MIT License</a>
 
         </div>
       </div>
 
-    </div>
+
   </footer>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
-
-  <script src="js/materialize.js"></script>
+<script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="/js/application.js"></script>
-  <script type="text/javascript" src="js/redditjson.js"></script>
+<!-- <script type="text/javascript" src="js/redditjson.js"></script> -->
 </body>
 </html>
-
-</head>
