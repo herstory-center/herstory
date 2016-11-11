@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
+gem 'bcrypt'
+gem 'json'
 
 # Sinatra driver
 gem 'sinatra', '~> 1.0'
@@ -24,4 +26,6 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'pry'
+  gem 'byebug'
 end
