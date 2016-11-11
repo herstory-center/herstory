@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>User Login</h2>
+  <%= erb :'_errors' %>
+<hr><br>
+  <form class="" action='/sessions' method ='post'>
+     <div class="">
+      <label for=email class="">Email: </label>
+      <div class="">
+      <input type="text" class="" name="user[email]" placeholder="email"></div>
+    </div>
+     <div class="">
+      <label for=password class="">Password: </label>
+      <div class="col-sm-5">
+      <input type="password" class="" name="user[password]" placeholder="password"></div>
+    </div>
+
+     <div class="">
+      <div class="">
+      </div>
+    <div class="">
+    <input type="submit" class="" name="login" class="btn " value="login"></div>
+  </div>
+  </form>
+</div>
