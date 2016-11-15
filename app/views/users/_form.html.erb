@@ -1,0 +1,45 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form class="col s12" action='/users' method ='post'>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="username" name="user[username]" placeholder="username"type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" name="user[email]" placeholder="email">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" name="user[password]" placeholder="password">
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <input id="password" type="password" class="validate" name="user[password_confirmation]" placeholder="confirm password">
+      <label for="password">Password</label>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</form>
